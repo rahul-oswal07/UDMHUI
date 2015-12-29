@@ -1,0 +1,9 @@
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\bin\Release\SQLUtility.dll
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\bin\Release\SQLUtility.pdb
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\obj\Release\SQLUtility.dll
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\obj\Release\SQLUtility.pdb
+D:\UDMH\Phoenix\Development\UDMH\SQLUtility\SQLUtility\bin\Release\SQLUtility.dll
+D:\UDMH\Phoenix\Development\UDMH\SQLUtility\SQLUtility\bin\Release\SQLUtility.pdb
+D:\UDMH\Phoenix\Development\UDMH\SQLUtility\SQLUtility\obj\Release\SQLUtility.dll
+D:\UDMH\Phoenix\Development\UDMH\SQLUtility\SQLUtility\obj\Release\SQLUtility.pdb
+D:\UDMH\Phoenix\Development\UDMH\SQLUtility\SQLUtility\obj\Release\SQLUtility.csprojResolveAssemblyReference.cache

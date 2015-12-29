@@ -1,0 +1,8 @@
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\SourceDataManager\SourceDataManager\SourceDataManager\bin\Debug\UDMH_SDM.exe.config
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceDataManager\bin\Debug\UDMH_SDM.exe.config
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceDataManager\bin\Debug\UDMH_SDM.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceDataManager\bin\Debug\UDMH_SDM.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceDataManager\bin\Debug\Utility.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceDataManager\obj\x86\Debug\UDMH_SDM.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceDataManager\obj\x86\Debug\UDMH_SDM.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceDataManager\obj\x86\Debug\SourceDataManager.csprojResolveAssemblyReference.cache

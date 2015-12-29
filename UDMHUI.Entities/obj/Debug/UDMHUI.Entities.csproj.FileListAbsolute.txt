@@ -1,0 +1,5 @@
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.Entities\bin\Debug\UDMHUI.Entities.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.Entities\bin\Debug\UDMHUI.Entities.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.Entities\obj\Debug\UDMHUI.Entities.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.Entities\obj\Debug\UDMHUI.Entities.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.Entities\obj\Debug\UDMHUI.Entities.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\bin\Debug\SQLUtility.dll
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\bin\Debug\SQLUtility.pdb
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\obj\Debug\SQLUtility.dll
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\obj\Debug\SQLUtility.pdb
+D:\TFS\UDMH\Phoenix\General\UDTF\Others\SQLUtility\SQLUtility\obj\Debug\SQLUtility.csprojResolveAssemblyReference.cache

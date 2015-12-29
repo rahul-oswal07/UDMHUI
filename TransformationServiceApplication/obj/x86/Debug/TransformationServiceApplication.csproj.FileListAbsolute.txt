@@ -1,0 +1,6 @@
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationServiceApplication\bin\Debug\TransformationServiceApplication.exe.config
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationServiceApplication\bin\Debug\TransformationServiceApplication.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationServiceApplication\bin\Debug\TransformationServiceApplication.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationServiceApplication\bin\Debug\Utility.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationServiceApplication\obj\x86\Debug\TransformationServiceApplication.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationServiceApplication\obj\x86\Debug\TransformationServiceApplication.pdb

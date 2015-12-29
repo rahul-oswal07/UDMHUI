@@ -1,0 +1,8 @@
+c:\users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\bin\Debug\HelperTool.exe.config
+c:\users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\bin\Debug\HelperTool.exe
+c:\users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\bin\Debug\HelperTool.pdb
+c:\users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\bin\Debug\C5.dll
+c:\users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\bin\Debug\Plossum CommandLine.dll
+c:\users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\obj\Debug\HelperTool.exe
+c:\users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\obj\Debug\HelperTool.pdb
+C:\Users\jainrocn\documents\visual studio 2013\Projects\HelperTool\HelperTool\obj\Debug\HelperTool.csprojResolveAssemblyReference.cache

@@ -1,0 +1,5 @@
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\bin\Debug\UDMHUI.BusinessLogic.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\bin\Debug\UDMHUI.BusinessLogic.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.csprojResolveAssemblyReference.cache

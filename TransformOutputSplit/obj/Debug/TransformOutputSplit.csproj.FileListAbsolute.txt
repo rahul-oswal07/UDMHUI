@@ -1,0 +1,16 @@
+D:\Data\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.exe.config
+D:\Data\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.exe
+D:\Data\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.pdb
+D:\Data\TransformOutputSplit\TransformOutputSplit\bin\Debug\Utility.dll
+D:\Data\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.exe
+D:\Data\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.pdb
+D:\Data\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.csprojResolveAssemblyReference.cache
+D:\Work (In queue)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.exe.config
+D:\Work (In queue)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.exe
+D:\Work (In queue)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.pdb
+D:\Work (In queue)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\bin\Debug\Utility.dll
+D:\Work (In queue)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.exe
+D:\Work (In queue)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.pdb
+D:\Work (Done)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.exe.config
+D:\Work (Done)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.exe
+D:\Work (Done)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.pdb

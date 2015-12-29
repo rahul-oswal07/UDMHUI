@@ -1,0 +1,5 @@
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.DataAccess\bin\Debug\UDMHUI.DataAccess.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.DataAccess\bin\Debug\UDMHUI.DataAccess.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.DataAccess\obj\Debug\UDMHUI.DataAccess.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.DataAccess\obj\Debug\UDMHUI.DataAccess.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.DataAccess\obj\Debug\UDMHUI.DataAccess.csprojResolveAssemblyReference.cache

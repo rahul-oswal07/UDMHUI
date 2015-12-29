@@ -1,0 +1,13 @@
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\bin\Debug\UDMHUI.UI.exe.config
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\bin\Debug\UDMHUI.UI.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\bin\Debug\UDMHUI.UI.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\bin\Debug\UDMHUI.BusinessLogic.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\bin\Debug\UDMHUI.BusinessLogic.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\obj\Debug\UDMHUI.UI.csprojResolveAssemblyReference.cache
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\obj\Debug\UDMHUI.UI.Home.resources
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\obj\Debug\UDMHUI.UI.Properties.Resources.resources
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\obj\Debug\UDMHUI.UI.csproj.GenerateResource.Cache
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\obj\Debug\UDMHUI.UI.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\obj\Debug\UDMHUI.UI.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\bin\Debug\UDMHUI.Entities.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.UI\bin\Debug\UDMHUI.Entities.pdb

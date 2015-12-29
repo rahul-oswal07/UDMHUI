@@ -1,0 +1,14 @@
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\FileWatcher\FileWatcher\bin\Debug\FileWatcher.exe.config
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\FileWatcher\FileWatcher\bin\Debug\FileWatcher.exe
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\FileWatcher\FileWatcher\bin\Debug\FileWatcher.pdb
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\FileWatcher\FileWatcher\bin\Debug\Utility.dll
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.csprojResolveAssemblyReference.cache
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.exe
+D:\TFSWorkspace\UDMH\Phoenix\Development\UDMH\FileWatcher\FileWatcher\obj\x86\Debug\FileWatcher.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\FileWatcher\bin\Debug\FileWatcher.exe.config
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\FileWatcher\bin\Debug\FileWatcher.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\FileWatcher\bin\Debug\FileWatcher.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\FileWatcher\bin\Debug\Utility.dll
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\FileWatcher\obj\x86\Debug\FileWatcher.exe
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\FileWatcher\obj\x86\Debug\FileWatcher.pdb
+D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\FileWatcher\obj\x86\Debug\FileWatcher.csprojResolveAssemblyReference.cache
