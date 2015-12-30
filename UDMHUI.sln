@@ -26,6 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		Solution Items\CreateUDMHSPs.sql = Solution Items\CreateUDMHSPs.sql
 		Solution Items\CreateUDMHTables.sql = Solution Items\CreateUDMHTables.sql
 		Solution Items\CreateViewsForFilters.sql = Solution Items\CreateViewsForFilters.sql
+		Solution Items\LookupFiles.csv = Solution Items\LookupFiles.csv
 		Solution Items\SQLException.ini = Solution Items\SQLException.ini
 		Solution Items\SQLUtility.dll = Solution Items\SQLUtility.dll
 	EndProjectSection
@@ -51,41 +52,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDMHUI.Entities", "UDMHUI.Entities\UDMHUI.Entities.csproj", "{93518B59-AD92-4B19-8F17-ECA6A254EAC6}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 6
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = http://useaihp877:8080/tfs/maincollection
-		SccProjectUniqueName0 = SourceDataManager\\SourceDataManager.csproj
-		SccProjectName0 = SourceDataManager
-		SccAuxPath0 = http://useaihp877:8080/tfs/maincollection
-		SccLocalPath0 = SourceDataManager
-		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName1 = FileWatcher\\FileWatcher.csproj
-		SccProjectName1 = FileWatcher
-		SccAuxPath1 = http://useaihp877:8080/tfs/maincollection
-		SccLocalPath1 = FileWatcher
-		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName2 = SourceTransformationManager\\SourceTransformationManager.csproj
-		SccProjectName2 = SourceTransformationManager
-		SccAuxPath2 = http://useaihp877:8080/tfs/maincollection
-		SccLocalPath2 = SourceTransformationManager
-		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName3 = TransformationControlWindowService\\TransformationControlWindowService.csproj
-		SccProjectName3 = TransformationControlWindowService
-		SccAuxPath3 = http://useaihp877:8080/tfs/maincollection
-		SccLocalPath3 = TransformationControlWindowService
-		SccProvider3 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName4 = TransformationServiceApplication\\TransformationServiceApplication.csproj
-		SccProjectName4 = TransformationServiceApplication
-		SccAuxPath4 = http://useaihp877:8080/tfs/maincollection
-		SccLocalPath4 = TransformationServiceApplication
-		SccProvider4 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccProjectUniqueName5 = SQLUtility\\SQLUtility.csproj
-		SccProjectName5 = SQLUtility
-		SccAuxPath5 = http://useaihp877:8080/tfs/maincollection
-		SccLocalPath5 = SQLUtility
-		SccProvider5 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Debug|Mixed Platforms = Debug|Mixed Platforms

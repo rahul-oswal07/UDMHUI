@@ -56,11 +56,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.btnReset = new System.Windows.Forms.Button();
+            this.lstMessageBox = new System.Windows.Forms.ListBox();
             this.button2 = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.lstMessageBox = new System.Windows.Forms.ListBox();
+            this.button10 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
@@ -357,6 +359,8 @@
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button10);
+            this.tabPage2.Controls.Add(this.btnReset);
             this.tabPage2.Controls.Add(this.lstMessageBox);
             this.tabPage2.Controls.Add(this.button2);
             this.tabPage2.Location = new System.Drawing.Point(4, 29);
@@ -368,12 +372,34 @@
             this.tabPage2.Text = "DB Setup";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // btnReset
+            // 
+            this.btnReset.Location = new System.Drawing.Point(157, 258);
+            this.btnReset.Name = "btnReset";
+            this.btnReset.Size = new System.Drawing.Size(120, 46);
+            this.btnReset.TabIndex = 3;
+            this.btnReset.Text = "RESET";
+            this.btnReset.UseVisualStyleBackColor = true;
+            this.btnReset.Click += new System.EventHandler(this.OnLogResetButtonClick);
+            // 
+            // lstMessageBox
+            // 
+            this.lstMessageBox.AccessibleDescription = "";
+            this.lstMessageBox.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            this.lstMessageBox.FormattingEnabled = true;
+            this.lstMessageBox.ItemHeight = 20;
+            this.lstMessageBox.Location = new System.Drawing.Point(7, 7);
+            this.lstMessageBox.Name = "lstMessageBox";
+            this.lstMessageBox.Size = new System.Drawing.Size(723, 224);
+            this.lstMessageBox.TabIndex = 2;
+            this.lstMessageBox.SelectedIndexChanged += new System.EventHandler(this.lstMessageBox_SelectedIndexChanged);
+            // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(549, 283);
+            this.button2.Location = new System.Drawing.Point(8, 258);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(180, 75);
+            this.button2.Size = new System.Drawing.Size(120, 46);
             this.button2.TabIndex = 1;
             this.button2.Text = "CreateDB";
             this.button2.UseVisualStyleBackColor = true;
@@ -409,14 +435,15 @@
             this.tabPage5.Text = "tabPage5";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
-            // lstMessageBox
+            // button10
             // 
-            this.lstMessageBox.FormattingEnabled = true;
-            this.lstMessageBox.ItemHeight = 20;
-            this.lstMessageBox.Location = new System.Drawing.Point(130, 32);
-            this.lstMessageBox.Name = "lstMessageBox";
-            this.lstMessageBox.Size = new System.Drawing.Size(457, 204);
-            this.lstMessageBox.TabIndex = 2;
+            this.button10.Location = new System.Drawing.Point(313, 258);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(134, 46);
+            this.button10.TabIndex = 4;
+            this.button10.Text = "LoadLookup";
+            this.button10.UseVisualStyleBackColor = true;
+            this.button10.Click += new System.EventHandler(this.OnLoadLookupButtonClick);
             // 
             // Home
             // 
@@ -473,6 +500,8 @@
         private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Label lblMessage;
         private System.Windows.Forms.ListBox lstMessageBox;
+        private System.Windows.Forms.Button btnReset;
+        private System.Windows.Forms.Button button10;
     }
 }
 

@@ -1,8 +1,10 @@
 ﻿using Microsoft.SqlServer.Management.Common;
 using Microsoft.SqlServer.Management.Smo;
 using System;
+using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
@@ -27,18 +29,16 @@ namespace UDMHUI.UI
         private const string CREATELUTTABLEPROCEDURE = "CreateLUTTables";
         private const string CREATEUDMHTABLES = "CreateUDMHTables";
         private const string CONFIGUREDB = "ConfigureDb";
-        private const string UTILITYPATH = "$(varSQLUtilityPath)";
-        private const string DBNAME = "[$(VARDBNAME)]";
         private const string CREATEDBSPNAME = "CREATEDB";
 
         #endregion
 
         #region Events
+
+
         private void OnXO2PathBrowseButtonClick(object sender, EventArgs e)
         {
-
             txtXO2Path.Text = GetFilePathOrDirectoryPath(false);
-
         }
         private void OnSQLUtilityPathBrowseButtonClick(object sender, EventArgs e)
         {
@@ -76,11 +76,13 @@ namespace UDMHUI.UI
             //create a stored proceduere on masterdb to create db
             string connectionString = ConfigurationController.Default.MasterDb;
             string sqlServerInstance = ConfigurationController.Default.SQLServerInstanceName;
+            connectionString = ReplaceValue(connectionString, SQLSERVERINSTANCENAME, sqlServerInstance);
+
             string dbName = ConfigurationController.Default.DatabaseName;
             string dbPath = ConfigurationController.Default.DBPath;
             bool result = CreateExecuteCreateDBProcedure(dbName, dbPath, connectionString);
-            
-            Logger.LogDebug("On Create Button Click");
+            if (result)
+                AddMessage("{0} database created...", dbName);
 
             string configureDBScript = File.ReadAllText(@"..\..\..\Solution Items\Configure.sql");
             result = CreateAndExecuteStoredProcedure(configureDBScript, connectionString, CONFIGUREDB);
@@ -93,41 +95,68 @@ namespace UDMHUI.UI
 
 
             result = CreateAndExecuteStoredProcedure(createTableScript, connectionString, CREATETABLEPROCEDURE);
+            if (result)
+                AddMessage("SRCTables created...");
 
             //create LUT tables
             string createLUTTables = File.ReadAllText(@"..\..\..\Solution Items\CreateLUTTables.sql");
             result = CreateAndExecuteStoredProcedure(createLUTTables, connectionString, CREATELUTTABLEPROCEDURE);
+            if (result)
+                AddMessage("LUT tables created...");
 
             string createUDMHTables = File.ReadAllText(@"..\..\..\Solution Items\CreateUDMHTables.sql");
             result = CreateAndExecuteStoredProcedure(createUDMHTables, connectionString, CREATEUDMHTABLES);
+            if (result)
+                AddMessage("UDMH table created...");
 
             string createSSISFrmkTables = File.ReadAllText(@"..\..\..\Solution Items\CreateSSISFrmkTables.sql");
 
             result = ExecuteSqlScriptFromFile(connectionString, createSSISFrmkTables);
+            if (result)
+                AddMessage("SSIS Frmk tables created...");
 
             string createTGTTables = File.ReadAllText(@"..\..\..\Solution Items\CreateTGTTables.sql");
             result = ExecuteSqlScriptFromFile(connectionString, createTGTTables);
+            if (result)
+                AddMessage("TGT tables created...");
 
             string createSQLUtility = File.ReadAllText(@"..\..\..\Solution Items\CreateSQLUtility.sql");
             createSQLUtility = string.Format(createSQLUtility, ConfigurationController.Default.DatabaseName, ConfigurationController.Default.SQLUtilityPath);
             result = ExecuteSqlScriptFromFile(connectionString, createSQLUtility);
+            if (result)
+                AddMessage("SQL Utility Assembly registered");
 
             string createViewsForFilters = File.ReadAllText(@"..\..\..\Solution Items\CreateViewsForFilters.sql");
             result = ExecuteSqlScriptFromFile(connectionString, createViewsForFilters);
+            if (result)
+                AddMessage("View for filters created...");
 
             string createSplitDBObjectsSql = File.ReadAllText(@"..\..\..\Solution Items\CreateSplitDBObjects.sql");
             result = ExecuteSqlScriptFromFile(connectionString, createSplitDBObjectsSql);
+            if (result)
+                AddMessage("Execution CreateSplitDBObjects script successfully");
 
             string createBQFormattedViewsSql = File.ReadAllText(@"..\..\..\Solution Items\CreateBQFormattedViews.sql");
             result = ExecuteSqlScriptFromFile(connectionString, createBQFormattedViewsSql);
+            if (result)
+                AddMessage("Execution CreateBQFormattedViews script successfully");
 
             string createTGTSPsSql = File.ReadAllText(@"..\..\..\Solution Items\CreateTGTSPs.sql");
             result = ExecuteSqlScriptFromFile(connectionString, createTGTSPsSql);
+            if (result)
+                AddMessage("Execution CreateTGTSPs script successfully");
 
         }
         #endregion
 
         #region Private Methods
+
+        private void AddMessage(string message, params object[] args)
+        {
+            string formattedMessage = string.Format(message, args);
+            lstMessageBox.Items.Add(formattedMessage);
+            lstMessageBox.Refresh();
+        }
         private string GetFilePathOrDirectoryPath(bool isFile)
         {
             if (isFile)
@@ -452,5 +481,66 @@ namespace UDMHUI.UI
             LoadDefaultValues();
         }
         #endregion
+
+        private void lstMessageBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void OnLogResetButtonClick(object sender, EventArgs e)
+        {
+            lstMessageBox.Items.Clear();
+        }
+
+        private void OnLoadLookupButtonClick(object sender, EventArgs e)
+        {
+            string lookupFilePath = ConfigurationController.Default.LookupPath;
+            string packageFilePath = ConfigurationController.Default.PackagePath;
+            string dtexecPath = ConfigurationController.Default.DTExecPath;
+            string connectionString = ConfigurationController.Default.UDHMRUNDB;
+            string dbName = ConfigurationController.Default.DatabaseName;
+            string sqlServerInstance = ConfigurationController.Default.SQLServerInstanceName;
+            connectionString = ReplaceValue(connectionString, DATABASENAME, dbName);
+            connectionString = ReplaceValue(connectionString, SQLSERVERINSTANCENAME, sqlServerInstance);
+            IEnumerable<string> files = File.ReadLines(@"..\..\..\Solution Items\LookupFiles.csv");
+            foreach (string file in files)
+            {
+                string[] filenames = file.Split('\t');
+                string packagePath = Path.Combine(packageFilePath, filenames[0]);
+                string lookupPath = Path.Combine(lookupFilePath, filenames[1]);
+                bool result = ExecutePackage(dtexecPath, packagePath, connectionString, lookupPath);
+
+            }
+
+
+        }
+
+        private bool ExecutePackage(string dtexecPath, string packagePath, string connectionString, string lookupPath)
+        {
+            Process process = new Process();
+            process.StartInfo.FileName = dtexecPath;
+            process.StartInfo.Arguments = " /File \"" + packagePath + "\"" + " /SET \"\\Package.Variables[connTransformation].Value\";" + "\"\\\"" + connectionString.Trim() + "\\\"\"" + " /SET \"\\Package.Variables[srcFilePath].Value\";" + "\"" + lookupPath.Trim() + "\"";
+            process.Start();
+            //   string output = process.StandardOutput.ReadToEnd();
+            return true;
+
+
+
+
+
+            //Microsoft.SqlServer.Dts.Runtime.Application app = new Microsoft.SqlServer.Dts.Runtime.Application();
+            //Package package = null;
+            //DTSExecResult pkgResults;
+            //Variables vars;
+            //package = app.LoadPackage(packagePath, null);
+            //vars = package.Variables;
+            //vars["connTransformation"].Value = connectionString;
+            //vars["srcFilePath"].Value = lookupPath;
+            //pkgResults = package.Execute(null, vars, null, null, null);
+
+            //return true;
+
+
+        }
     }
 }
