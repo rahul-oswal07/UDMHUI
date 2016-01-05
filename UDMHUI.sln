@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDMHUI.BusinessLogic", "UDMHUI.BusinessLogic\UDMHUI.BusinessLogic.csproj", "{E9B98EE9-6CFC-40FF-B3B0-7FD6795C086F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDMHUI.DataAccess", "UDMHUI.DataAccess\UDMHUI.DataAccess.csproj", "{417225F8-951B-424B-96E0-0D19309CA09C}"
@@ -50,6 +48,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SQLUtility", "SQLUtility\SQLUtility.csproj", "{58BED439-DAF5-4732-870E-37CC8E124C24}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UDMHUI.Entities", "UDMHUI.Entities\UDMHUI.Entities.csproj", "{93518B59-AD92-4B19-8F17-ECA6A254EAC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Utility", "Utility\Utility.csproj", "{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -183,6 +183,16 @@ Global
 		{93518B59-AD92-4B19-8F17-ECA6A254EAC6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{93518B59-AD92-4B19-8F17-ECA6A254EAC6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{93518B59-AD92-4B19-8F17-ECA6A254EAC6}.Release|x86.ActiveCfg = Release|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{81388A01-AD5B-4FF6-945C-3A5D8AC657F7}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

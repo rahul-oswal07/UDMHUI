@@ -7,3 +7,12 @@ D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationControlWindowSe
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationControlWindowService\obj\x86\Debug\TransformationControlWindowService.exe
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationControlWindowService\obj\x86\Debug\TransformationControlWindowService.pdb
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\TransformationControlWindowService\obj\x86\Debug\TransformationControlWindowService.csprojResolveAssemblyReference.cache
+D:\Project\UDMHUI-master\TransformationControlWindowService\bin\Debug\TransformationControlWindowService.exe.config
+D:\Project\UDMHUI-master\TransformationControlWindowService\bin\Debug\TransformationControlWindowService.exe
+D:\Project\UDMHUI-master\TransformationControlWindowService\bin\Debug\TransformationControlWindowService.pdb
+D:\Project\UDMHUI-master\TransformationControlWindowService\bin\Debug\Utility.dll
+D:\Project\UDMHUI-master\TransformationControlWindowService\obj\x86\Debug\TransformationControlWindowService.csprojResolveAssemblyReference.cache
+D:\Project\UDMHUI-master\TransformationControlWindowService\obj\x86\Debug\UNISYS.UDTS.WinService.ProjectInstaller.resources
+D:\Project\UDMHUI-master\TransformationControlWindowService\obj\x86\Debug\TransformationControlWindowService.csproj.GenerateResource.Cache
+D:\Project\UDMHUI-master\TransformationControlWindowService\obj\x86\Debug\TransformationControlWindowService.exe
+D:\Project\UDMHUI-master\TransformationControlWindowService\obj\x86\Debug\TransformationControlWindowService.pdb

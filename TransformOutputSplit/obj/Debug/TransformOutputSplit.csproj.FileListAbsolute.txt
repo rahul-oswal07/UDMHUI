@@ -14,3 +14,7 @@ D:\Work (In queue)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\ob
 D:\Work (Done)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\bin\Debug\TransformOutputSplit.exe.config
 D:\Work (Done)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.exe
 D:\Work (Done)\X02 Package\7sep\TransformOutputSplit\TransformOutputSplit\obj\Debug\TransformOutputSplit.pdb
+D:\Project\UDMHUI-master\TransformOutputSplit\obj\Debug\TransformOutputSplit.csprojResolveAssemblyReference.cache
+D:\Project\UDMHUI-master\TransformOutputSplit\obj\Debug\TransformOutputSplit.exe
+D:\Project\UDMHUI-master\TransformOutputSplit\obj\Debug\TransformOutputSplit.pdb
+D:\Project\UDMHUI-master\TransformOutputSplit\bin\Debug\TransformOutputSplit.exe.config

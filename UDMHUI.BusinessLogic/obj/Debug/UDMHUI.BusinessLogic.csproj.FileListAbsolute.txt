@@ -3,3 +3,10 @@ D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\bin\Debu
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.dll
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.pdb
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Project\UDMHUI-master\UDMHUI.BusinessLogic\bin\Debug\UDMHUI.BusinessLogic.dll
+D:\Project\UDMHUI-master\UDMHUI.BusinessLogic\bin\Debug\UDMHUI.BusinessLogic.pdb
+D:\Project\UDMHUI-master\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.dll
+D:\Project\UDMHUI-master\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.pdb
+D:\Project\UDMHUI-master\UDMHUI.BusinessLogic\obj\Debug\UDMHUI.BusinessLogic.csprojResolveAssemblyReference.cache
+D:\Project\UDMHUI-master\UDMHUI.BusinessLogic\bin\Debug\Utility.dll
+D:\Project\UDMHUI-master\UDMHUI.BusinessLogic\bin\Debug\Utility.pdb

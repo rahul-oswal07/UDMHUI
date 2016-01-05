@@ -16,6 +16,7 @@ namespace UDMHUI.UI
     public partial class Home : Form
     {
         #region Variable Declaration
+
         private const string DBPATH = "DBPath";
         private const string LOOKUPPATH = "LookupPath";
         private const string DTEXECPATH = "DTExecPath";
@@ -33,9 +34,45 @@ namespace UDMHUI.UI
 
         #endregion
 
+        #region Constructor
+        public Home()
+        {
+            InitializeComponent();
+            LoadDefaultValues();
+        }
+        #endregion 
+
         #region Events
 
+        private void OnLoadLookupButtonClick(object sender, EventArgs e)
+        {
+            LoadLookup();
+        }
 
+        /// <summary>
+        /// loads the lookup data
+        /// </summary>
+        private void LoadLookup()
+        {
+            string lookupFilePath = ConfigurationController.Default.LookupPath;
+            string packageFilePath = ConfigurationController.Default.PackagePath;
+            string dtexecPath = ConfigurationController.Default.DTExecPath;
+            string connectionString = ConfigurationController.Default.SSISConnectionString;
+            string dbName = ConfigurationController.Default.DatabaseName;
+            string sqlServerInstance = ConfigurationController.Default.SQLServerInstanceName;
+            connectionString = ReplaceValue(connectionString, DATABASENAME, dbName);
+            connectionString = ReplaceValue(connectionString, SQLSERVERINSTANCENAME, sqlServerInstance);
+            IEnumerable<string> files = File.ReadLines(@"..\..\..\Solution Items\LookupFiles.csv");
+            foreach (string file in files)
+            {
+                string[] filenames = file.Split('\t');
+                string packagePath = Path.Combine(packageFilePath, filenames[0]);
+                string lookupPath = Path.Combine(lookupFilePath, filenames[1]);
+                bool result = ExecutePackage(dtexecPath, packagePath, connectionString, lookupPath);
+                if (result)
+                    AddMessage("{0} Lookup file uploaded.", lookupPath);
+            }
+        }
         private void OnXO2PathBrowseButtonClick(object sender, EventArgs e)
         {
             txtXO2Path.Text = GetFilePathOrDirectoryPath(false);
@@ -89,7 +126,7 @@ namespace UDMHUI.UI
 
             //create source table on the database created in above script
             string createTableScript = File.ReadAllText(@"..\..\..\Solution Items\CreateSRCTables.sql");
-            connectionString = ConfigurationController.Default.UDHMRUNDB;
+            connectionString = ConfigurationController.Default.ConnectionString;
             connectionString = ReplaceValue(connectionString, DATABASENAME, dbName);
             connectionString = ReplaceValue(connectionString, SQLSERVERINSTANCENAME, sqlServerInstance);
 
@@ -120,6 +157,11 @@ namespace UDMHUI.UI
             if (result)
                 AddMessage("TGT tables created...");
 
+            string udmhStoredProcedure = File.ReadAllText(@"..\..\..\Solution Items\CreateUDMHSPs.sql");
+            result = ExecuteSqlScriptFromFile(connectionString, udmhStoredProcedure);
+            if (result)
+                AddMessage("UDMH stored Procedures created...");
+
             string createSQLUtility = File.ReadAllText(@"..\..\..\Solution Items\CreateSQLUtility.sql");
             createSQLUtility = string.Format(createSQLUtility, ConfigurationController.Default.DatabaseName, ConfigurationController.Default.SQLUtilityPath);
             result = ExecuteSqlScriptFromFile(connectionString, createSQLUtility);
@@ -146,17 +188,90 @@ namespace UDMHUI.UI
             if (result)
                 AddMessage("Execution CreateTGTSPs script successfully");
 
+            if (chkLookupLoad.Checked)
+                LoadLookup();
+
+            if (result)
+            {
+                lblMessage.Visible = true;
+                lblMessage.ForeColor = Color.Green;
+                lblMessage.Text = "Database Created Successfully";
+            }
+        }
+        private void OnLogResetButtonClick(object sender, EventArgs e)
+        {
+            lstMessageBox.Items.Clear();
+        }
+        private void OnLoadControlFileButtonClick(object sender, EventArgs e)
+        {
+            SDMMangerController sdmManagerController = new SDMMangerController();
+            sdmManagerController.LoadSource(txtControlFileName.Text, "CONTROL");
+        }
+
+        private void OnLoadSourceButtonClick(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(txtSourceFilePath.Text))
+            {
+                SDMMangerController sdmManagerController = new SDMMangerController();
+                string[] files = Directory.GetFiles(txtSourceFilePath.Text, "*.csv");
+                foreach (string file in files)
+                {
+                    string fileName = Path.GetFileName(file);
+                    sdmManagerController.LoadSource(fileName, "SOURCE");
+                }
+            }
+        }
+
+        private void OnSourceFileBrowseButtonClick(object sender, EventArgs e)
+        {
+            txtSourceFilePath.Text = GetFilePathOrDirectoryPath(false);
         }
         #endregion
 
         #region Private Methods
 
+        /// <summary>
+        /// Executes the specified package 
+        /// </summary>
+        /// <param name="dtexecPath"></param>
+        /// <param name="packagePath"></param>
+        /// <param name="connectionString"></param>
+        /// <param name="lookupPath"></param>
+        /// <returns></returns>
+        private bool ExecutePackage(string dtexecPath, string packagePath, string connectionString, string lookupPath)
+        {
+            try
+            {
+                Process process = new Process();
+                process.StartInfo.FileName = dtexecPath;
+                process.StartInfo.Arguments = " /File \"" + packagePath + "\"" + " /SET \"\\Package.Variables[connTransformation].Value\";" + "\"\\\"" + connectionString.Trim() + "\\\"\"" + " /SET \"\\Package.Variables[srcFilePath].Value\";" + "\"" + lookupPath.Trim() + "\"";
+                process.StartInfo.CreateNoWindow = true;
+                process.StartInfo.WindowStyle = ProcessWindowStyle.Hidden;             
+                process.Start();     
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Logger.LogError(ex,"Error Executing package {0}", packagePath);
+                return false;
+            }           
+        }
+        /// <summary>
+        /// Adds the error or success message to list box
+        /// </summary>
+        /// <param name="message"></param>
+        /// <param name="args"></param>
         private void AddMessage(string message, params object[] args)
         {
             string formattedMessage = string.Format(message, args);
             lstMessageBox.Items.Add(formattedMessage);
             lstMessageBox.Refresh();
         }
+        /// <summary>
+        /// gets the file or directory specified in the string
+        /// </summary>
+        /// <param name="isFile"></param>
+        /// <returns></returns>
         private string GetFilePathOrDirectoryPath(bool isFile)
         {
             if (isFile)
@@ -180,10 +295,6 @@ namespace UDMHUI.UI
                 }
             }
         }
-
-
-
-
         /// <summary>
         /// Loads the default values for the fields defined in screen from config file
         /// </summary>
@@ -198,6 +309,8 @@ namespace UDMHUI.UI
             this.txtSQLUtilityPath.Text = ConfigurationController.Default.SQLUtilityPath;
             this.txtXO2Path.Text = ConfigurationController.Default.XO2Path;
             this.txtPackagePath.Text = ConfigurationController.Default.PackagePath;
+            this.txtControlFileName.Text = ConfigurationController.Default.DefaultControlFileName;
+            this.txtSourceFilePath.Text = ConfigurationController.Default.SourceFilePath;
         }
 
         private void OnUpdateButtonClick(object sender, EventArgs e)
@@ -472,75 +585,6 @@ namespace UDMHUI.UI
             return new ValidateInputResult { Message = "Save Successfully", ResultCode = ValidateInputResultCode.Success };
 
         }
-        #endregion
-
-        #region Constructor
-        public Home()
-        {
-            InitializeComponent();
-            LoadDefaultValues();
-        }
-        #endregion
-
-        private void lstMessageBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void OnLogResetButtonClick(object sender, EventArgs e)
-        {
-            lstMessageBox.Items.Clear();
-        }
-
-        private void OnLoadLookupButtonClick(object sender, EventArgs e)
-        {
-            string lookupFilePath = ConfigurationController.Default.LookupPath;
-            string packageFilePath = ConfigurationController.Default.PackagePath;
-            string dtexecPath = ConfigurationController.Default.DTExecPath;
-            string connectionString = ConfigurationController.Default.UDHMRUNDB;
-            string dbName = ConfigurationController.Default.DatabaseName;
-            string sqlServerInstance = ConfigurationController.Default.SQLServerInstanceName;
-            connectionString = ReplaceValue(connectionString, DATABASENAME, dbName);
-            connectionString = ReplaceValue(connectionString, SQLSERVERINSTANCENAME, sqlServerInstance);
-            IEnumerable<string> files = File.ReadLines(@"..\..\..\Solution Items\LookupFiles.csv");
-            foreach (string file in files)
-            {
-                string[] filenames = file.Split('\t');
-                string packagePath = Path.Combine(packageFilePath, filenames[0]);
-                string lookupPath = Path.Combine(lookupFilePath, filenames[1]);
-                bool result = ExecutePackage(dtexecPath, packagePath, connectionString, lookupPath);
-
-            }
-
-
-        }
-
-        private bool ExecutePackage(string dtexecPath, string packagePath, string connectionString, string lookupPath)
-        {
-            Process process = new Process();
-            process.StartInfo.FileName = dtexecPath;
-            process.StartInfo.Arguments = " /File \"" + packagePath + "\"" + " /SET \"\\Package.Variables[connTransformation].Value\";" + "\"\\\"" + connectionString.Trim() + "\\\"\"" + " /SET \"\\Package.Variables[srcFilePath].Value\";" + "\"" + lookupPath.Trim() + "\"";
-            process.Start();
-            //   string output = process.StandardOutput.ReadToEnd();
-            return true;
-
-
-
-
-
-            //Microsoft.SqlServer.Dts.Runtime.Application app = new Microsoft.SqlServer.Dts.Runtime.Application();
-            //Package package = null;
-            //DTSExecResult pkgResults;
-            //Variables vars;
-            //package = app.LoadPackage(packagePath, null);
-            //vars = package.Variables;
-            //vars["connTransformation"].Value = connectionString;
-            //vars["srcFilePath"].Value = lookupPath;
-            //pkgResults = package.Execute(null, vars, null, null, null);
-
-            //return true;
-
-
-        }
+        #endregion             
     }
 }

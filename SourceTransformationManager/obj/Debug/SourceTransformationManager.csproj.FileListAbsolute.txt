@@ -5,3 +5,10 @@ D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceTransformationManager\b
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceTransformationManager\obj\Debug\SourceTransformationManager.csprojResolveAssemblyReference.cache
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceTransformationManager\obj\Debug\SourceTransformationManager.exe
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\SourceTransformationManager\obj\Debug\SourceTransformationManager.pdb
+D:\Project\UDMHUI-master\SourceTransformationManager\bin\Debug\SourceTransformationManager.exe.config
+D:\Project\UDMHUI-master\SourceTransformationManager\bin\Debug\SourceTransformationManager.exe
+D:\Project\UDMHUI-master\SourceTransformationManager\bin\Debug\SourceTransformationManager.pdb
+D:\Project\UDMHUI-master\SourceTransformationManager\bin\Debug\Utility.dll
+D:\Project\UDMHUI-master\SourceTransformationManager\obj\Debug\SourceTransformationManager.exe
+D:\Project\UDMHUI-master\SourceTransformationManager\obj\Debug\SourceTransformationManager.pdb
+D:\Project\UDMHUI-master\SourceTransformationManager\obj\Debug\SourceTransformationManager.csprojResolveAssemblyReference.cache

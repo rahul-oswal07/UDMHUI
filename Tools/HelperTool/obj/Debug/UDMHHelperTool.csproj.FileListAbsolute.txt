@@ -11,3 +11,9 @@ D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\Tools\HelperTool\bin\Debug\He
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\Tools\HelperTool\obj\Debug\HelperTool.exe
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\Tools\HelperTool\obj\Debug\HelperTool.pdb
 D:\TFSWorkspace\UDMH\Phoenix\General\Others\UDMHUI\Tools\HelperTool\obj\Debug\UDMHHelperTool.csprojResolveAssemblyReference.cache
+D:\Project\UDMHUI-master\Tools\HelperTool\bin\Debug\HelperTool.exe.config
+D:\Project\UDMHUI-master\Tools\HelperTool\obj\Debug\HelperTool.exe
+D:\Project\UDMHUI-master\Tools\HelperTool\obj\Debug\HelperTool.pdb
+D:\Project\UDMHUI-master\Tools\HelperTool\bin\Debug\HelperTool.exe
+D:\Project\UDMHUI-master\Tools\HelperTool\bin\Debug\HelperTool.pdb
+D:\Project\UDMHUI-master\Tools\HelperTool\obj\Debug\UDMHHelperTool.csprojResolveAssemblyReference.cache

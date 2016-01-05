@@ -1,4 +1,5 @@
-﻿using System.Configuration;
+﻿using System;
+using System.Configuration;
 
 namespace UDMHUI.BusinessLogic
 {
@@ -61,11 +62,38 @@ namespace UDMHUI.BusinessLogic
             get { return ConfigurationManager.ConnectionStrings["masterdb"].ConnectionString; }
         }
 
-        public string UDHMRUNDB
+        public string ConnectionString
         {
-            get { return ConfigurationManager.ConnectionStrings["UDMH"].ConnectionString; }
+            get { return ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString; }
+        }
+        public string SSISConnectionString
+        {
+            get { return ConfigurationManager.ConnectionStrings["SSISPacakageRun"].ConnectionString; }
+        }
+        public string IsLogEnabled
+        {
+            get { return ConfigurationManager.AppSettings["EnableLog"].ToString(); }
+        }
+        public string Priority
+        {
+            get { return ConfigurationManager.AppSettings["Priority"].ToString(); }
+        }
+        public string SourceType
+        {
+            get { return ConfigurationManager.AppSettings["SourceType"].ToString(); }
+        }
+        public string DefaultControlFileName
+        {
+            get { return ConfigurationManager.AppSettings["DefaultControlFileName"].ToString(); }
         }
 
+         public string SourceFilePath
+        {
+            get { return ConfigurationManager.AppSettings["SourceFilePath"].ToString(); }
+        }
+
+        
+        
 
         /// <summary>
         /// Change the value for specified key
@@ -105,5 +133,9 @@ namespace UDMHUI.BusinessLogic
                 }
             }
         }
+
+
+       
+
     }
 }
